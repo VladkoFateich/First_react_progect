@@ -1,8 +1,14 @@
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
-import Dialogs from '../Dialogs/Dialogs'
 import MainClass from './Main.module.css'
 import Menu from './Menubar/Menu'
 import Profile from './Profile/Profile'
+import Dialogs from './Dialogs/Dialogs'
+import News from './News/News'
+import Music from './Music/Music'
+import Setting from './Setting/Setting'
+
+
+
 
 const Main = () => {
     return (
