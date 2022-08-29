@@ -16,8 +16,11 @@ const Main = () => {
         <div className={MainClass.main}>
             <Menu/>
             <Routes>
-            <Route path='/profile' component={<Profile/>}/>
-            <Route path='/dialogs' component={<Dialogs/>}/>
+            <Route path='/profile' element={<Profile/>}/>
+            <Route path='/dialogs' element={<Dialogs/>}/>
+            <Route path='/news' element={<News/>}/>
+            <Route path='/music' element={<Music/>}/>
+            <Route path='/setting' element={<Setting/>}/>
             </Routes>
         </div>
         </BrowserRouter>
