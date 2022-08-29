@@ -1,0 +1,11 @@
+.main {
+    width: 100%;
+
+}
+.background {
+    background-image: url(https://klike.net/uploads/posts/2019-01/medium/1547365431_13.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    margin-bottom: 10px;
+}

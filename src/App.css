@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.app-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  background-color:antiquewhite;
+}
+

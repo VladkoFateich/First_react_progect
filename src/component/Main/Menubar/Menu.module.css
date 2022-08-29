@@ -1,0 +1,20 @@
+.menu {
+    background-color: rgb(53, 52, 52);
+    padding: 10px 10px;
+}
+.list {
+    list-style-type: none;
+}
+.elemLink {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 22px;
+    color: aliceblue;
+}
+/* должно применяться только к первому элементу .elemLink 
+.elemLink:nth-child(1) {
+    color: goldenrod;
+} 
+*/
+.elem:nth-child(5) {
+    margin-top: 30px;
+}

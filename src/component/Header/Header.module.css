@@ -1,0 +1,9 @@
+.header {
+    width: 100%;
+    background-color: rgb(53, 52, 52);
+    padding: 10px 5px;
+    margin-bottom: 20px;
+}
+.logo {
+    width: 130px;
+}
