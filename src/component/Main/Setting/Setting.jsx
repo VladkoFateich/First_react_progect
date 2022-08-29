@@ -3,7 +3,7 @@ import SettingClass from './Setting.module.css'
 const Setting = () => {
     return(
         <div className={SettingClass.content}>
-            News
+            Setting
         </div>
     )
 }
