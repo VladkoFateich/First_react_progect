@@ -1,26 +1,47 @@
-import DialogsClass from './Dialogs.module.css'
-import {NavLink} from 'react-router-dom'
+import DialogsClass from "./Dialogs.module.css";
+import { NavLink } from "react-router-dom";
 
-const Dialogs = (props) => {
+const DialogItem = (props) => {
+  return (
+    <div className={DialogsClass.item}>
+      <NavLink
+        className={(navItem) =>
+          navItem.isActive ? DialogsClass.active : DialogsClass.link
+        }
+        to={"/dialogs/" + props.id}
+      >
+        {props.name}
+      </NavLink>
+    </div>
+  );
+};
+const Messages = (props) => {
     return(
-        <div className={DialogsClass.content}>
-            <h2 className={DialogsClass.title}>Dialogs</h2>
-            <div className={DialogsClass.dialogs}>
-                <div className={DialogsClass.dialogItem}>
-                    <div className={DialogsClass.item}><NavLink className={DialogsClass.link} to='/dialogs/Yosya'>Yosya</NavLink></div>
-                    <div className={DialogsClass.item + ' ' + DialogsClass.active}><NavLink className={DialogsClass.link} to='/dialogs/Vasa'>Vasa</NavLink></div>
-                    <div className={DialogsClass.item}><NavLink className={DialogsClass.link} to='/dialogs/Babich'>Babich</NavLink></div>
-                    <div className={DialogsClass.item}><NavLink className={DialogsClass.link} to='/dialogs/Sirock'>Sirock</NavLink></div>
-                    <div className={DialogsClass.item}><NavLink className={DialogsClass.link} to='/dialogs/Holod'>Holod</NavLink></div>
-                </div>
-            <div className={DialogsClass.messages}>
-                <div className={DialogsClass.message}>Yo</div>
-                <div className={DialogsClass.message}>How are you</div>
-                <div className={DialogsClass.message}>My name is Yosya</div>
-            </div>
-            </div>
-        </div>
+        <div className={DialogsClass.message}>{props.message}</div>
     )
 }
 
-export default Dialogs
+const Dialogs = (props) => {
+  return (
+    <div className={DialogsClass.content}>
+      <h2 className={DialogsClass.title}>Dialogs</h2>
+      <div className={DialogsClass.dialogs}>
+        <div className={DialogsClass.dialogItem}>
+          <DialogItem name="Yosya" id="Yosya" />
+          <DialogItem name="Vasa" id="Vasa" />
+          <DialogItem name="Babich" id="Babich" />
+          <DialogItem name="Sirock" id="Sirock" />
+          <DialogItem name="Masel" id="Masel" />
+          <DialogItem name="Holod" id="Holod" />
+        </div>
+        <div className={DialogsClass.messages}>
+            <Messages message = 'Yo'/>
+            <Messages message = 'How are you'/>
+            <Messages message = 'I am fine'/>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Dialogs;

@@ -1,17 +1,32 @@
-import MenuClass from './Menu.module.css'
-import {NavLink} from 'react-router-dom'
+import MenuClass from "./Menu.module.css";
+import { NavLink } from "react-router-dom";
 
-const Menu = () => {
-    return (
-        <div className={MenuClass.menu}>
-<ul className={MenuClass.list}>
-    <li className={MenuClass.elem}><NavLink className={MenuClass.elemLink} to='/profile'>Profile</NavLink></li>
-    <li className={MenuClass.elem}><NavLink className={MenuClass.elemLink} to='/dialogs'>Message</NavLink></li>
-    <li className={MenuClass.elem}><NavLink className={MenuClass.elemLink} to='/news'>News</NavLink></li>
-    <li className={MenuClass.elem}><NavLink className={MenuClass.elemLink} to='/music'>Music</NavLink></li>
-    <li className={MenuClass.elem}><NavLink className={MenuClass.elemLink} to='/setting'>Setting</NavLink></li>
-</ul>
-        </div>
-    )
-}
-export default Menu
+const Elem = (props) => {
+  return (
+    <li className={MenuClass.elem}>
+      <NavLink
+        className={(navMenu) =>
+          navMenu.isActive ? MenuClass.active : MenuClass.elemLink
+        }
+        to={"" + props.id} //Проблема 100% в том что доолжно быть в кавычках
+      >
+        {props.value}
+      </NavLink>
+    </li>
+  );
+};
+
+const Menu = (props) => {
+  return (
+    <div className={MenuClass.menu}>
+      <ul className={MenuClass.list}>
+        <Elem id="profile" value="Profile" />
+        <Elem id="message" value="Message" />
+        <Elem id="news" value="News" />
+        <Elem id="music" value="Music" />
+        <Elem id="setting" value="Setting" />
+      </ul>
+    </div>
+  );
+};
+export default Menu;
