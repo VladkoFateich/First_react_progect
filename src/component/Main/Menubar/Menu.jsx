@@ -8,7 +8,7 @@ const Elem = (props) => {
         className={(navMenu) =>
           navMenu.isActive ? MenuClass.active : MenuClass.elemLink
         }
-        to={"" + props.id} //Проблема 100% в том что доолжно быть в кавычках
+        to={/dialogs/ + props.id} 
       >
         {props.value}
       </NavLink>
@@ -19,7 +19,7 @@ const Elem = (props) => {
 const Menu = (props) => {
   return (
     <div className={MenuClass.menu}>
-      <ul className={MenuClass.list}>
+      <ul className={MenuClass.list}></ul>
         <Elem id="profile" value="Profile" />
         <Elem id="message" value="Message" />
         <Elem id="news" value="News" />
