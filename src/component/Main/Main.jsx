@@ -10,14 +10,14 @@ import Setting from './Setting/Setting'
 
 
 
-const Main = () => {
+const Main = (props) => {
     return (
         <BrowserRouter>
         <div className={MainClass.main}>
-            <Menu/>
+            <Menu elemData={props.elemData}/>
             <Routes>
-            <Route path='/profile/*' element={<Profile/>}/>
-            <Route path='/dialogs/*' element={<Dialogs/>}/>
+            <Route path='/profile/*' element={<Profile postData={props.postData}/>}/>
+            <Route path='/dialogs/*' element={<Dialogs messagesData={props.messagesData} dialogItemData={props.dialogItemData}/>}/>
             <Route path='/news/*' element={<News/>}/>
             <Route path='/music/*' element={<Music/>}/>
             <Route path='/setting/*' element={<Setting/>}/>

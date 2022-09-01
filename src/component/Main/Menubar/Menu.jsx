@@ -17,21 +17,11 @@ const Elem = (props) => {
 };
 
 const Menu = (props) => {
-  let elemData = [
-    { id: "profile", value: "Profile" },
-    { id: "dialogs", value: "Message" },
-    { id: "news", value: "News" },
-    { id:"music", value:"Music" },
-    { id:"setting", value:"Setting" },
-  ];
+  let elemElements = props.elemData.map(element => <Elem id={element.id} value ={element.value}/>)
   return (
     <div className={MenuClass.menu}>
       <ul className={MenuClass.list}>
-        <Elem id={elemData[0].id} value={elemData[0].value} />
-        <Elem id={elemData[1].id} value={elemData[1].value} />
-        <Elem id={elemData[2].id} value={elemData[2].value} />
-        <Elem id={elemData[3].id} value={elemData[3].value} />
-        <Elem id={elemData[4].id} value={elemData[4].value} />
+        {elemElements}
       </ul>
     </div>
   );

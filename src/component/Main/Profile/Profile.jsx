@@ -2,12 +2,12 @@ import Avatar from './Avatar/Avatar'
 import ProfileClass from './Profile.module.css'
 import MyPosts from './MyPosts/MyPosts'
 
-const Profile = () => {
+const Profile = (props) => {
     return (
         <div className={ProfileClass.main}>
             <div className={ProfileClass.background}></div>
             <Avatar/>
-            <MyPosts/>
+            <MyPosts postData={props.postData}/>
         </div>
     )
 }
