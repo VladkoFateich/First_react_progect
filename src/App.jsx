@@ -7,7 +7,7 @@ const App = (props) => {
   return (
     <div className="app-wrapper">
       <Header/>
-      <Main postData={props.postData} messagesData={props.messagesData} dialogItemData={props.dialogItemData} elemData={props.elemData}/>
+<Main postData={props.postData} messagesData={props.messagesData} dialogItemData={props.dialogItemData} elemData={props.elemData} newsPostData={props.newsPostData} postTitleData={props.postTitleData}/>
     </div>
   );
 }

@@ -18,7 +18,7 @@ const Main = (props) => {
             <Routes>
             <Route path='/profile/*' element={<Profile postData={props.postData}/>}/>
             <Route path='/dialogs/*' element={<Dialogs messagesData={props.messagesData} dialogItemData={props.dialogItemData}/>}/>
-            <Route path='/news/*' element={<News/>}/>
+            <Route path='/news/*' element={<News newsPostData={props.newsPostData} postTitleData={props.postTitleData}/>}/>
             <Route path='/music/*' element={<Music/>}/>
             <Route path='/setting/*' element={<Setting/>}/>
             </Routes>
