@@ -1,5 +1,13 @@
 .newsPost {
     color: rgb(182, 202, 202);
 }
-
-
+.title {
+    text-align: center;
+}
+.postImg {
+    margin: 20px 10px 20px 20px;
+    float: left;
+}
+.news {
+    margin-top: 40px;
+}

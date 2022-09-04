@@ -1,6 +1,6 @@
 .content {
     width: 100%;
-    padding: 20px 20px;
+    padding: 20px 20px 20px 0;
     background-color: rgb(53, 52, 52);
     display: grid;
     grid-template-columns: 1fr 1fr;

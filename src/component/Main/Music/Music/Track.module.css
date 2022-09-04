@@ -1,0 +1,29 @@
+.trackBox {
+display: flex;
+flex-direction: row;
+background-color: blanchedalmond;
+border: 1px solid goldenrod;
+border-radius: 10px;
+margin-bottom: 10px;
+}
+.id {
+    width: 20px;
+    text-align: end;
+    margin-right: 10px;
+}
+.author {
+    font-weight: 600;
+    width: 80px;
+    text-align: end;
+    margin-right: 10px;
+}
+.track {
+    width: 200px;
+    text-align: end;
+    margin-right: 10px;
+}
+.time {
+    width: 300px;
+    text-align: end;
+    margin-right: 10px;
+}

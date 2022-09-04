@@ -2,7 +2,6 @@ import DialogsClass from "./Dialogs.module.css";
 import { NavLink } from "react-router-dom";
 
 const DialogItem = (props) => {
-
   return (
     <div className={DialogsClass.item}>
       <NavLink
@@ -32,14 +31,8 @@ const Dialogs = (props) => {
     <div className={DialogsClass.content}>
       <h2 className={DialogsClass.title}>Dialogs</h2>
       <div className={DialogsClass.dialogs}>
-        <div className={DialogsClass.dialogItem}>
-        {dialogItemElements}
-
-        </div>
-        <div className={DialogsClass.messages}>
-          {messagesElements}
-
-        </div>
+        <div className={DialogsClass.dialogItem}>{dialogItemElements}</div>
+        <div className={DialogsClass.messages}>{messagesElements}</div>
       </div>
     </div>
   );
