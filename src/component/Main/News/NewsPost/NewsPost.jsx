@@ -1,4 +1,4 @@
-import NewsPostClass from "./NewsPost.module.css";
+import NewsPostClass from "./newsPost.module.css";
 
 const NewsPost = (props) => {
   return (
@@ -7,8 +7,7 @@ const NewsPost = (props) => {
       <img
         className={NewsPostClass.postImg}
         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFtWdO_hXtchoJdzOZwp6RVH9yOnlKvnbPxA&usqp=CAU"
-        alt="img"
-      >{props.image}</img>
+        alt="img"/>
       <p className={NewsPostClass.news}>{props.text}</p>
     </div>
   );

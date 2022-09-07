@@ -1,6 +1,6 @@
-import Avatar from './Avatar/Avatar'
-import ProfileClass from './Profile.module.css'
-import MyPosts from './MyPosts/MyPosts'
+import Avatar from './Avatar/avatar'
+import ProfileClass from './profile.module.css'
+import MyPosts from './MyPosts/myPosts'
 
 const Profile = (props) => {
     return (

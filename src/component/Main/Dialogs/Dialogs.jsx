@@ -1,4 +1,5 @@
-import DialogsClass from "./Dialogs.module.css";
+import React from 'react';
+import DialogsClass from "./dialogs.module.css";
 import { NavLink } from "react-router-dom";
 
 const DialogItem = (props) => {
@@ -10,6 +11,11 @@ const DialogItem = (props) => {
         }
         to={"/dialogs/" + props.id}
       >
+        <img
+          className={DialogsClass.ava}
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVzdxX6cZ5CrZJl1rE6FvzVT5_GFb11AZ9Cg&usqp=CAU"
+          alt="ava"
+        />
         {props.name}
       </NavLink>
     </div>
@@ -27,12 +33,23 @@ const Dialogs = (props) => {
     <Messages message={message.message} />
   ));
 
+  let newMessageElem = React.createRef()
+  let newMessage = () => {
+    let text = newMessageElem.current.value 
+    props.addMessage(text)
+  }
   return (
     <div className={DialogsClass.content}>
       <h2 className={DialogsClass.title}>Dialogs</h2>
       <div className={DialogsClass.dialogs}>
         <div className={DialogsClass.dialogItem}>{dialogItemElements}</div>
-        <div className={DialogsClass.messages}>{messagesElements}</div>
+        <div className={DialogsClass.messages}>{messagesElements}
+        <div className={DialogsClass.addMessage}>
+        <textarea ref={newMessageElem}></textarea>
+        <div>
+          <button onClick={newMessage}>send message</button>
+        </div>
+      </div></div>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import TrackClass from "./Track.module.css";
+import TrackClass from "./track.module.css";
 
 const Track = (props) => {
   return (

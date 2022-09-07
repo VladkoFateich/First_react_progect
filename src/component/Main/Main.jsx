@@ -1,11 +1,12 @@
 import {BrowserRouter, Route, Routes} from 'react-router-dom'
-import MainClass from './Main.module.css'
-import Menu from './Menubar/Menu'
-import Profile from './Profile/Profile'
-import Dialogs from './Dialogs/Dialogs'
-import News from './News/News'
-import Music from './Music/Music'
-import Setting from './Setting/Setting'
+import MainClass from './main.module.css'
+import Menu from './Menubar/menu'
+import Profile from './Profile/profile'
+import Dialogs from './Dialogs/dialogs'
+import News from './News/news'
+import Music from './Music/music'
+import Setting from './Setting/setting'
+import Friends from './Friends/friends'
 
 
 
@@ -21,6 +22,7 @@ const Main = (props) => {
             <Route path='/news/*' element={<News newsPostData={props.newsPostData} />}/>
             <Route path='/music/*' element={<Music musicData={props.musicData}/>}/>
             <Route path='/setting/*' element={<Setting/>}/>
+            <Route path='/friends/*' element={<Friends/>}/>
             </Routes>
         </div>
         </BrowserRouter>

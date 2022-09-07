@@ -1,5 +1,5 @@
-import NewsClass from "./News.module.css";
-import NewsPost from "./NewsPost/NewsPost";
+import NewsClass from "./news.module.css";
+import NewsPost from "./NewsPost/newsPost";
 
 const News = (props) => {
     let newsPostElement = props.newsPostData.map(newsPost => (

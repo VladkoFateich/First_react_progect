@@ -1,4 +1,4 @@
-import SettingClass from './Setting.module.css'
+import SettingClass from './setting.module.css'
 
 const Setting = () => {
     return(

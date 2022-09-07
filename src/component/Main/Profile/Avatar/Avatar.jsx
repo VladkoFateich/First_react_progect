@@ -1,4 +1,4 @@
-import AvatarClass from './Avatar.module.css'
+import AvatarClass from './avatar.module.css'
 
 const Avatar = () => {
     return (

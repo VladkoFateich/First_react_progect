@@ -7,15 +7,18 @@
 }
 .elemLink {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 22px;
+    font-size: 26px;
     color: aliceblue;
 }
 .active {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     color: gold;
-    font-size: 22px;
+    font-size: 30px;
     font-weight: 700;
 } 
 .elem:nth-child(5) {
     margin-top: 30px;
+}
+.elem:nth-child(6) {
+    margin-top: 60px;
 }

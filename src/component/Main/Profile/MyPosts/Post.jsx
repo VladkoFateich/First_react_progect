@@ -1,4 +1,4 @@
-import PostClass from './Post.module.css'
+import PostClass from './post.module.css'
 
 const Post = (props) => {
     return (<div className={PostClass.content}>
