@@ -1,10 +1,10 @@
 import React from 'react';
-import DialogsClass from "./dialogs.module.css";
+import DialogsClass from "./Dialogs.module.css";
 import { NavLink } from "react-router-dom";
 
 const DialogItem = (props) => {
   return (
-    <div className={DialogsClass.item}>
+    <div className={DialogsClass.item}>S
       <NavLink
         className={(navItem) =>
           navItem.isActive ? DialogsClass.active : DialogsClass.link

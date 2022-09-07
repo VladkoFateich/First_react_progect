@@ -1,4 +1,4 @@
-import MenuClass from "./menu.module.css";
+import MenuClass from "./Menu.module.css";
 import { NavLink } from "react-router-dom";
 
 const Elem = (props) => {

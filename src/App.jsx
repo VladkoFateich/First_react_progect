@@ -1,6 +1,6 @@
 import './App.css';
-import Header from "./component/Header/header";
-import Main from './component/Main/main';
+import Header from "./component/Header/Header";
+import Main from './component/Main/Main';
 
 const App = (props) => {
 

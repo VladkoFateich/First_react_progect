@@ -1,4 +1,4 @@
-import NewsPostClass from "./newsPost.module.css";
+import NewsPostClass from "./NewsPost.module.css";
 
 const NewsPost = (props) => {
   return (

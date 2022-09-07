@@ -1,6 +1,6 @@
 import React from 'react';
-import MusicClass from './music.module.css'
-import Track from './Music/track'
+import MusicClass from './Music.module.css'
+import Track from './Music/Track'
 
 const Music = (props) => {
 

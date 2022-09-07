@@ -1,5 +1,5 @@
 import React from 'react';
-import FriendsClass from './friends.module.css'
+import FriendsClass from './Friends.module.css'
 
 const Friends = (props) => {
     let newFriendElem = React.createRef()
