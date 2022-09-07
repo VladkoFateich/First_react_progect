@@ -27,4 +27,3 @@ const Main = (props) => {
     )
 }
 export default Main
-// postTitleData={props.postTitleData}
