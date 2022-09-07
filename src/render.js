@@ -4,14 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {addPost} from './State/state'
-import {newMesssage} from './State/state'
-import {addNewTracks} from './State/state'
+import {addMessage} from './State/state'
+import {addNewTrack} from './State/state'
+
 
 export let rerenderTree = (State) => {
   const root = ReactDOM.createRoot(document.getElementById('root'));
   root.render(
     <React.StrictMode>
-      <App state={State}/>
+      <App state={State} addPost={addPost} addMessage={addMessage} addNewTrack={addNewTrack}/>
     </React.StrictMode>
   )
 }

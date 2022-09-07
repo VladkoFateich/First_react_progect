@@ -17,10 +17,10 @@ const Main = (props) => {
         <div className={MainClass.main}>
             <Menu elemData={props.elemData}/>
             <Routes>
-            <Route path='/profile/*' element={<Profile postData={props.postData}/>}/>
-            <Route path='/dialogs/*' element={<Dialogs messagesData={props.messagesData} dialogItemData={props.dialogItemData}/>}/>
+            <Route path='/profile/*' element={<Profile postData={props.postData} addPost={props.addPost}/>}/>
+            <Route path='/dialogs/*' element={<Dialogs messagesData={props.messagesData} dialogItemData={props.dialogItemData} addMessage={props.addMessage}/>}/>
             <Route path='/news/*' element={<News newsPostData={props.newsPostData} />}/>
-            <Route path='/music/*' element={<Music musicData={props.musicData}/>}/>
+            <Route path='/music/*' element={<Music musicData={props.musicData} addNewTrack={props.addNewTrack}/>}/>
             <Route path='/setting/*' element={<Setting/>}/>
             <Route path='/friends/*' element={<Friends/>}/>
             </Routes>

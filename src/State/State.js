@@ -93,19 +93,19 @@ export let addPost = (postMessage) => {
     State.postData.push(newPost)
     rerenderTree(State)
 }
-export let addMessages = (addMessage) => {
+export let addMessage = (sendMessage) => {
     let newMessage = {
         id:5,
-        message: 'Ok, and you bye!'
+        message: sendMessage
     }
     State.messagesData.push(newMessage)
     rerenderTree(State)
 }
-export let addNewTracks = (addTrack) => {
+export let addNewTrack = (addAuthor, addTrack) => {
     let newTrack = {
         id: 11, 
-        author: "Какой-то очередной автор", 
-        track: "Какой-то трек № 11", 
+        author: addAuthor, 
+        track: addTrack, 
         time: "5:33" 
     }
     State.musicData.push(newTrack)
