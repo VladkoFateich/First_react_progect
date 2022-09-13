@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const DialogItem = (props) => {
   return (
-    <div className={DialogsClass.item}>S
+    <div className={DialogsClass.item}>
       <NavLink
         className={(navItem) =>
           navItem.isActive ? DialogsClass.active : DialogsClass.link

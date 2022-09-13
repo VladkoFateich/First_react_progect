@@ -7,7 +7,9 @@ const Profile = (props) => {
         <div className={ProfileClass.main}>
             <div className={ProfileClass.background}></div>
             <Avatar/>
-            <MyPosts postData={props.postData} addPost={props.addPost}/>
+            <MyPosts postData={props.postData} 
+            addPost={props.addPost}
+            updateNewPostText={props.updateNewPostText}/>
         </div>
     )
 }

@@ -1,10 +1,12 @@
-import { rerenderTree } from "../render";
-
+let rerenderTree = () => {
+    console.log('Хер пойми че происходит')
+}
 const State = {
   postData: [
     { id: 1, message: "Hi, how are you", likeCount: 2 },
     { id: 2, message: "My first post", likeCount: 34 },
   ],
+  newPostText: '',
   elemData: [
     { id: "profile", value: "Profile" },
     { id: "dialogs", value: "Message" },
@@ -83,14 +85,20 @@ const State = {
     },
   ],
 };
+ window.State = State
 
-export let addPost = (postMessage) => {
+export let addPost = () => {
     let newPost = {
         id:5,
-        message: postMessage,
+        message: State.newPostText,
         likeCount: 0
     }
     State.postData.push(newPost)
+    State.newPostText=''
+    rerenderTree(State)
+}
+export let updateNewPostText = (newText) => {
+    State.newPostText = newText
     rerenderTree(State)
 }
 export let addMessage = (sendMessage) => {
@@ -110,5 +118,8 @@ export let addNewTrack = (addAuthor, addTrack) => {
     }
     State.musicData.push(newTrack)
     rerenderTree(State)
+}
+export const subscribe = (observer) => {
+    rerenderTree = observer
 }
 export default State;
