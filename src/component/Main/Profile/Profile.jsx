@@ -8,9 +8,10 @@ const Profile = (props) => {
             <div className={ProfileClass.background}></div>
             <Avatar/>
             <MyPosts postData={props.postData} 
-            addPost={props.addPost}
-            updateNewPostText={props.updateNewPostText}/>
+            dispatch={props.dispatch}
+            />
         </div>
     )
 }
 export default Profile
+//updateNewPostText={props.updateNewPostText}

@@ -8,11 +8,11 @@ const App = (props) => {
   return (
     <div className="app-wrapper">
       <Header/>
-<Main postData={props.state.postData} messagesData={props.state.messagesData} dialogItemData={props.state.dialogItemData} elemData={props.state.elemData} newsPostData={props.state.newsPostData} musicData={props.state.musicData} addPost={props.addPost} addMessage={props.addMessage} addNewTrack={props.addNewTrack}  updateNewPostText={props.updateNewPostText}/>
+<Main postData={props.state.postData} messagesData={props.state.messagesData} dialogItemData={props.state.dialogItemData} elemData={props.state.elemData} newsPostData={props.state.newsPostData} musicData={props.state.musicData} dispatch={props.dispatch} addMessage={props.addMessage} addNewTrack={props.addNewTrack}  />
     </div>
   );
 }
 
 export default App;
 
-// 
+// updateNewPostText={props.updateNewPostText}
