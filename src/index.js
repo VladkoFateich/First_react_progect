@@ -12,7 +12,7 @@ let rerenderTree = (state) => {
 
   root.render(
     <React.StrictMode>
-    <App state={state} dispatch={store.dispatch.bind(store)} addMessage={store.addMessage.bind(store)} addNewTrack={store.addNewTrack.bind(store)} />
+    <App state={store.getState()} dispatch={store.dispatch.bind(store)} addMessage={store.addMessage.bind(store)} addNewTrack={store.addNewTrack.bind(store)} />
     </React.StrictMode>
   )
 }

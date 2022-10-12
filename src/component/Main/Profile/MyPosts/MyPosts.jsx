@@ -1,8 +1,7 @@
 import React from 'react';
 import MyPostsClass from "./MyPosts.module.css";
 import Post from "./Post";
-import {addPostActionCreator} from '../../../../State/state'
-import {updateNewPostTextActionCreator} from '../../../../State/state'
+import {addPostActionCreator, updateNewPostTextActionCreator} from '../../../../State/profile-reducer'
 
 const MyPosts = (props) => {
 
@@ -12,7 +11,6 @@ const MyPosts = (props) => {
   
   let addPost = () => {
     props.dispatch(addPostActionCreator())
-    // props.updateNewPostText('')
   }
 
   let onPostChange = () => {
