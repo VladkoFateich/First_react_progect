@@ -1,6 +1,7 @@
 import React from 'react';
 import DialogsClass from "./Dialogs.module.css";
 import { NavLink } from "react-router-dom";
+import {addMessageActionCreator, updateNewMessageTextActionCreator} from '../../../State/dialogs-reducer'
 
 const DialogItem = (props) => {
   return (
@@ -34,9 +35,14 @@ const Dialogs = (props) => {
   ));
 
   let newMessageElem = React.createRef()
+
   let addMessage = () => {
     let text = newMessageElem.current.value 
-    props.addMessage(text)
+    props.dispatch(addMessageActionCreator(text))
+  }
+  let onMessageChange = () => {
+    let text = newMessageElem.current.value
+    props.dispatch(updateNewMessageTextActionCreator(text))
   }
   return (
     <div className={DialogsClass.content}>
@@ -45,7 +51,7 @@ const Dialogs = (props) => {
         <div className={DialogsClass.dialogItem}>{dialogItemElements}</div>
         <div className={DialogsClass.messages}>{messagesElements}
         <div className={DialogsClass.addMessage}>
-        <textarea ref={newMessageElem}></textarea>
+        <textarea ref={newMessageElem} onChange={onMessageChange} value={props.newPostText}></textarea>
         <div>
           <button onClick={addMessage}>send message</button>
         </div>

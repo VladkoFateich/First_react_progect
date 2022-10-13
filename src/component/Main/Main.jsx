@@ -18,7 +18,7 @@ const Main = (props) => {
             <Menu elemData={props.elemData}/>
             <Routes>
             <Route path='/profile/*' element={<Profile postData={props.postData} dispatch={props.dispatch} />}/>
-            <Route path='/dialogs/*' element={<Dialogs messagesData={props.messagesData} dialogItemData={props.dialogItemData} addMessage={props.addMessage}/>}/>
+            <Route path='/dialogs/*' element={<Dialogs messagesData={props.messagesData} dispatch={props.dispatch} dialogItemData={props.dialogItemData} />}/>
             <Route path='/news/*' element={<News newsPostData={props.newsPostData} />}/>
             <Route path='/music/*' element={<Music musicData={props.musicData} addNewTrack={props.addNewTrack}/>}/>
             <Route path='/setting/*' element={<Setting/>}/>
@@ -29,4 +29,4 @@ const Main = (props) => {
     )
 }
 export default Main
-//updateNewPostText={props.updateNewPostText}
+//updateNewPostText={props.updateNewPostText} addMessage={props.addMessage}

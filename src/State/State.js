@@ -1,8 +1,11 @@
 import profileReducer from "./profile-reducer";
+import dialogReducer from './dialogs-reducer'
+
 
 let store = {
   _state: {
     newPostText: "",
+    newMessageText: "",
     postData: [
       { id: 1, message: "Hi, how are you", likeCount: 2 },
       { id: 2, message: "My first post", likeCount: 34 },
@@ -93,31 +96,32 @@ let store = {
   }, // Были функциями стали методами
   dispatch(action) {
     this._state.newPostText = profileReducer(this._state.newPostText, action);
+    this._state.newMessageText= dialogReducer(this._state.newMessageText, action)
 
     this._callSubscriber(this._state);
   },
   // addPost () {
-  //     let newPost = {
-  //         id:5,
-  //         message: this._state.newPostText,
-  //         likeCount: 0
-  //     }
-  //     this._state.postData.push(newPost)
-  //     this._state.newPostText=''
-  //     this._rerenderTree(this._State)
+      // let newPost = {
+      //     id:5,
+      //     message: this._state.newPostText,
+      //     likeCount: 0
+      // }
+      // this._state.postData.push(newPost)
+      // this._state.newPostText=''
+  //     this._rerenderTree(this._state)
   // },
   // updateNewPostText (newText) {
   //     this._state.newPostText = newText
   //     this._rerenderTree(this._state)
   // },
-  addMessage(sendMessage) {
-    let newMessage = {
-      id: 5,
-      message: sendMessage,
-    };
-    this._state.messagesData.push(newMessage);
-    this._callSubscriber(this._state);
-  },
+  // addMessage(sendMessage) {
+  //   let newMessage = {
+  //     id: 5,
+  //     message: sendMessage,
+  //   };
+  //   this._state.messagesData.push(newMessage);
+  //   this._callSubscriber(this._state);
+  // },
   addNewTrack(addAuthor) {
     let newTrack = {
       id: 11,

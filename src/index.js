@@ -12,7 +12,7 @@ let rerenderTree = (state) => {
 
   root.render(
     <React.StrictMode>
-    <App state={store.getState()} dispatch={store.dispatch.bind(store)} addMessage={store.addMessage.bind(store)} addNewTrack={store.addNewTrack.bind(store)} />
+    <App state={store.getState()} dispatch={store.dispatch.bind(store)}  addNewTrack={store.addNewTrack.bind(store)} />
     </React.StrictMode>
   )
 }
@@ -20,4 +20,4 @@ let rerenderTree = (state) => {
 
 rerenderTree(store.getState ())
 store.subscribe(rerenderTree)
-//updateNewPostText={store.updateNewPostText.bind(store)}
+//updateNewPostText={store.updateNewPostText.bind(store)} addMessage={store.addMessage.bind(store)}

@@ -1,7 +1,7 @@
 import './App.css';
 import Header from "./component/Header/Header";
 import Main from './component/Main/Main';
-import State from './State/state';
+// import store from './State/state';
 
 const App = (props) => {
 
